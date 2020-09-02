@@ -326,10 +326,7 @@ img {
 }
 
 /* Чем мы занимаемся*/
-/* .work .title {
-  margin-top: 0;
-  margin-bottom: 50px;
-} */
+
 .work .list {
   flex-wrap: wrap;
 }
@@ -601,6 +598,10 @@ footer .accent {
   margin-bottom: 30px;
 }
 
+.galery .item:hover {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(173, 167, 167, 0.2);
+}
 .galery .item:not(:nth-child(3n)) {
   margin-right: 30px;
 }
