@@ -101,6 +101,15 @@ img {
   letter-spacing: 0.03em;
 }
 
+.primary.button {
+  color: var(--secondary-text-color-button);
+  background-color: var(--secondary-bgc-button);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
 .secondary.button {
   min-width: 73px;
   padding: 6px 22px;
@@ -119,16 +128,6 @@ img {
 .secondary.button:focus {
   color: var(--secondary-text-color-button);
   background-color: var(--secondary-bgc-button);
-}
-
-.primary.button {
-  color: var(--secondary-text-color-button);
-  background-color: var(--secondary-bgc-button);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  text-align: center;
-  letter-spacing: 0.06em;
 }
 
 /* index.html */
@@ -224,31 +223,34 @@ img {
 
 /* Hero */
 .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   margin-left: auto;
   margin-right: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
-
   max-width: 1600px;
-  max-height: 600px;
-
-  text-align: center;
+  height: 600px;
   border: 1px solid #000000;
 
+  background-color: var(--accent-bg-color);
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
     url(../img/background-image.jpg);
-
-  background-color: var(--accent-bg-color);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-title {
   margin: auto;
-  max-width: 696px;
+  margin-top: 0;
   margin-bottom: 30px;
+  max-width: 696px;
 
   color: var(--white-text-color);
   font-weight: 900;
@@ -581,6 +583,9 @@ footer .accent {
 }
 
 /* portfolio.html */
+.portfolio {
+  border-top: 1px solid #ececec;
+}
 .selector {
   justify-content: center;
   margin-bottom: 50px;
