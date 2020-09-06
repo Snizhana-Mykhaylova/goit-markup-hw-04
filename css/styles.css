@@ -438,6 +438,11 @@ img {
 .clients .icon {
   fill: var(--primary-text-color);
 }
+.clients-link:hover,
+.clients-link:focus {
+  border: 1px solid #2196f3;
+}
+
 .clients-link:hover .icon {
   fill: var(--accent-text-color);
 }
