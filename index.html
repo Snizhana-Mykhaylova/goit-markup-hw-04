@@ -20,7 +20,7 @@
             >Web<span class="accent">Studio</span>
           </a>
           <ul class="nav-list flex list">
-            <li class="item">
+            <li class="item current">
               <a class="link current" href="./index.html">Студия</a>
             </li>
             <li class="item">
@@ -53,7 +53,9 @@
       <!--Герой-->
       <section class="hero">
         <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-        <a class="primary button link" href="">Заказать услугу</a>
+        <button class="primary button link" data-open-modal href="">
+          Заказать услугу
+        </button>
       </section>
 
       <!--Преимущества-->
@@ -99,13 +101,37 @@
           <h2 class="title">Чем мы занимаемся</h2>
           <ul class="list flex">
             <li class="item">
-              <img src="./img/img.jpg" alt="картинка" width="370" />
+              <div class="relative">
+                <h3 class="title">Десктопные приложения</h3>
+                <img
+                  class="work-image"
+                  src="./img/img.jpg"
+                  alt="картинка"
+                  width="370"
+                />
+              </div>
             </li>
             <li class="item">
-              <img src="./img/img-1.jpg" alt="картинка" width="370" />
+              <div class="relative">
+                <h3 class="title">Мобильные приложения</h3>
+                <img
+                  class="work-image"
+                  src="./img/img-1.jpg"
+                  alt="картинка"
+                  width="370"
+                />
+              </div>
             </li>
             <li class="item">
-              <img src="./img/img-2.jpg" alt="картинка" width="370" />
+              <div class="relative">
+                <h3 class="title">Дизайнерские решения</h3>
+                <img
+                  class="work-image"
+                  src="./img/img-2.jpg"
+                  alt="картинка"
+                  width="370"
+                />
+              </div>
             </li>
           </ul>
         </div>
@@ -393,5 +419,32 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-backdrop>
+      <div class="modal">
+        <button class="close" data-close-modal></button>
+      </div>
+    </div>
+
+    <script>
+      const refs = {
+        openModalBtn: document.querySelector('[data-open-modal]'),
+        closeModalBtn: document.querySelector('[data-close-modal]'),
+        backdrop: document.querySelector('[data-backdrop]'),
+      };
+
+      refs.openModalBtn.addEventListener('click', toggleModal);
+      refs.closeModalBtn.addEventListener('click', toggleModal);
+
+      refs.backdrop.addEventListener('click', logBackdropClick);
+
+      function toggleModal() {
+        refs.backdrop.classList.toggle('is-hidden');
+      }
+
+      function logBackdropClick() {
+        console.log('Это клик в бекдроп');
+      }
+    </script>
   </body>
 </html>
